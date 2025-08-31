@@ -5,7 +5,7 @@ import pandas as pd
 @st.cache_data
 def load_data():
     # Replace FILE_ID with your actual Google Drive file ID
-    url = "https://drive.google.com/uc?id=YOUR_FILE_ID"
+    url = "https://drive.google.com/uc?id=1PZUpYKJha8d-b1ZCQ15I8xs_jGCmSbRl"
     return pd.read_csv(url)
 
 df = load_data()
@@ -44,4 +44,5 @@ else:
 
 
 ##for running -- streamlit run "C:\Users\mrish\Downloads\app.py"
+
 
