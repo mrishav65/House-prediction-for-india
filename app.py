@@ -1,11 +1,12 @@
-# save this as app.py
 import streamlit as st
 import pandas as pd
 
-# Load dataset
+# Load dataset from Google Drive
 @st.cache_data
 def load_data():
-    return pd.read_csv(r"C:\Users\mrish\Downloads\india_housing_prices.csv")
+    # Replace FILE_ID with your actual Google Drive file ID
+    url = "https://drive.google.com/uc?id=YOUR_FILE_ID"
+    return pd.read_csv(url)
 
 df = load_data()
 
@@ -41,4 +42,6 @@ if not filtered_df.empty:
 else:
     st.warning("No properties match your filters.")
 
+
 ##for running -- streamlit run "C:\Users\mrish\Downloads\app.py"
+
